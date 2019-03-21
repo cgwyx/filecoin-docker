@@ -25,5 +25,5 @@ MAINTAINER cheng gong <512543469@qq.com>
 
 ENTRYPOINT []
 
-CMD ["/bin/bash"]
+CMD ["go-filecoin daemon"]
 
