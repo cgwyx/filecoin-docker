@@ -13,7 +13,7 @@ Docker of go-filecoin
 # go-filecoin init --devnet-user --genesisfile=http://user.kittyhawk.wtf:8020/genesis.car  
 # go-filecoin daemon  
 # 5.运行其他filecoin命令  
-# docker exec -it filecoin-node-1 go-filecoin  
+# docker exec -it filecoin-node-1 go-filecoin id 
 # docker exec -it filecoin-node-1 go-filecoin config heartbeat.nickname "yournode"  
 # docker exec -it filecoin-node-1 go-filecoin config heartbeat.nickname  
 # docker exec -it filecoin-node-1 go-filecoin config heartbeat.beatTarget "/dns4/stats-infra.kittyhawk.wtf/tcp/8080/ipfsQmUWmZnpZb6xFryNDeNU7KcJ1Af5oHy7fB9npU67sseEjR"  
