@@ -1,21 +1,27 @@
 ###########################################################################################################################################################
 # Dockerfile
 # File Author / Maintainer: cheng gong <512543469@qq.com>
-# filecoin-docker°æ°²×°¼°Ê¹ÓÃ·½·¨
-# 1.°²×°docker
+# filecoin-dockerç‰ˆå®‰è£…åŠä½¿ç”¨æ–¹æ³•
+# 1.å®‰è£…docker
 # $ curl -fsSL https://get.docker.com -o get-docker.sh
 # $ sudo sh get-docker.sh
 # $ sudo usermod -aG docker your-user
-# 2.ÏÂÔØfilecoin¾µÏñ
+# 2.ä¸‹è½½filecoiné•œåƒ
 # docker pull cgwyx/filecoin-docker
-# 3.ÔËĞĞ½ÚµãÈİÆ÷
-# docker run -it --rm --restart=always --name filecoin-node-1 -v ~/node-1/.filecoin:/root/.filecoin --entrypoint=/bin/sh cgwyx/filecoin-docker
-# 4.½øÈëÈİÆ÷
-# docker exec -it filecoin-user /bin/sh
-# 5.ÔÚÈİÆ÷ÄÚÔËĞĞ³õÊ¼»¯¼°Æô¶¯ÊØ»¤½ø³Ì
+# 3.è¿è¡ŒèŠ‚ç‚¹å®¹å™¨
+# docker run -it --restart=always --name filecoin-node-1 -v ~/node-1/.filecoin:/root/.filecoin cgwyx/filecoin-docker /bin/sh
+# 4.åœ¨å®¹å™¨å†…è¿è¡Œåˆå§‹åŒ–åŠå¯åŠ¨å®ˆæŠ¤è¿›ç¨‹
 # go-filecoin init --devnet-user --genesisfile=http://user.kittyhawk.wtf:8020/genesis.car
 # go-filecoin daemon
-# 6.Í¬²½Êı¾İÔÚ±¾µØÖ÷»ú~/node-1/.filecoinÄÚ
+# 5.è¿è¡Œå…¶ä»–filecoinå‘½ä»¤
+# docker exec -it filecoin-node-1 go-filecoin 
+# docker exec -it filecoin-node-1 go-filecoin config heartbeat.nickname "yournode"
+# docker exec -it filecoin-node-1 go-filecoin config heartbeat.nickname
+# docker exec -it filecoin-node-1 go-filecoin config heartbeat.beatTarget "/dns4/stats-infra.kittyhawk.wtf/tcp/8080/ipfsQmUWmZnpZb6xFryNDeNU7KcJ1Af5oHy7fB9npU67sseEjR"
+# docker exec -it filecoin-node-1 go-filecoin wallet addrs ls
+# 5.é‡æ–°è¿›å…¥å®¹å™¨
+# docker exec -it filecoin-node-1 /bin/sh
+# 6.åŒæ­¥æ•°æ®åœ¨æœ¬åœ°ä¸»æœº~/node-1/.filecoinå†…
 
 #########################################################################################################################################################
 
