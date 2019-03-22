@@ -8,7 +8,7 @@ sudo usermod -aG docker your-user
 2.下载filecoin镜像   
 docker pull cgwyx/filecoin-docker   
 3.运行节点容器    
-docker run -it --restart=always --name filecoin-node-1 -v ~/node-1/.filecoin:/root/.filecoin cgwyx/filecoin-docker /bin/sh  
+docker run -it --restart=always --name filecoin-node-1 -v \~/node-1/.filecoin:/root/.filecoin cgwyx/filecoin-docker /bin/sh  
 4.在容器内运行初始化及启动守护进程  
 go-filecoin init --devnet-user --genesisfile=http://user.kittyhawk.wtf:8020/genesis.car  
 go-filecoin daemon  
